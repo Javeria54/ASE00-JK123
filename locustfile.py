@@ -36,3 +36,8 @@ class QuickstartUser(HttpUser):
             time.sleep(1)
     
     #add your test here
+    @task(1)
+    def get_ex1(self):
+        for a in range(10):
+            self.client.get(f"/ex1?x=C1a0", name = "ciao", verify = False)
+            time.sleep(1)

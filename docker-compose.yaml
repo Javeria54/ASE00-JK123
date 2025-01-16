@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  ex1:
+    build: ./app
+    container_name: ex1-service
+    Ports:
+      - 8089:5001
+  
+locust:
+  build: .
+  ports:
+    - 8090:8089
